@@ -61,3 +61,36 @@ class CubicGenerator(square_gen.SquareGenerator):
 
 cubic_gen = CubicGenerator()
 print(cubic_gen.generate_squares(1, 6))
+
+
+# task_9.py
+
+class CubicGenerator(square_gen.SquareGenerator):
+    def generate_squares(self, start, end):
+        if end < start:
+            raise ValueError("End of range must be greater than or equal to start")
+        return [x**3 for x in range(start, end)]
+
+cubic_gen = CubicGenerator()
+try:
+    print(cubic_gen.generate_squares(7, 6))
+except ValueError as e:
+    print(e)
+
+# task_10
+
+from abc import ABC, abstractmethod
+
+class SquareGenerator(ABC):
+    @abstractmethod
+    def generate_squares(self, start, end):
+        pass
+
+class CubicGenerator(SquareGenerator):
+    def generate_squares(self, start, end):
+        return [x**3 for x in range(start, end)]
+
+cubic_gen = CubicGenerator()
+print(cubic_gen.generate_squares(1, 6))
+
+
