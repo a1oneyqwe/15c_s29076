@@ -51,3 +51,13 @@ try:
     print(square_generator_instance.generate_squares(1, 11))
 except ValueError as e:
     print(e)
+
+
+# task_8.py
+
+class CubicGenerator(square_gen.SquareGenerator):
+    def generate_squares(self, start, end):
+        return [x**3 for x in range(start, end)]
+
+cubic_gen = CubicGenerator()
+print(cubic_gen.generate_squares(1, 6))
