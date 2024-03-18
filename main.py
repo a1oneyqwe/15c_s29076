@@ -43,3 +43,11 @@ except ValueError as e:
     print(e)
 
 
+# task_7.py
+from module import square_generator as square_gen
+
+square_generator_instance = square_gen.SquareGenerator()  # Instantiate SquareGenerator class
+try:
+    print(square_generator_instance.generate_squares(1, 11))
+except ValueError as e:
+    print(e)
