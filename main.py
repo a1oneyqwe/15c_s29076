@@ -17,3 +17,13 @@ class SquareGenerator:
 
 square_gen = SquareGenerator()
 print(square_gen.generate_squares(1, 11))
+
+# task_4.py
+import math
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+        return [math.sqrt(x) for x in range(start, end)]
+
+square_gen = SquareGenerator()
+print(square_gen.generate_squares(1, 11))
